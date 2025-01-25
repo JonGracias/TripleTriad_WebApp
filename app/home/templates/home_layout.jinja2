@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SDEV300</title>
+    <meta name="SDEV300" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% assets "styles_home" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}">
+    {% endassets %} 
+
+</head>
+<body>
+    <main>
+        <header class="headerSection">
+          <h1> Net Games </h1>
+        </header>
+
+        <div class="navigation">
+          {% include "/navigation.jinja2" %}
+        </div>
+
+        <div class="container">
+          {% block content %}{% endblock %}
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {% assets "js_home" %}
+            <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+        {% endassets %}
+</body>
+</html>
+

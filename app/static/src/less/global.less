@@ -1,0 +1,60 @@
+@import 'home_vars.less';
+
+html{
+    overflow: hidden;
+}
+
+
+body{
+  font-family: @body-font;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  background: black;
+}
+
+main{
+  width: min(85ch, 100% - 2rem);
+  margin-inline: auto;
+}
+
+img,
+picture, 
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Hide the default scroll bars */
+::-webkit-scrollbar {
+    width: 1em;
+    height: 0em;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 0.25em;
+  }
+  
+  /* On hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #666;
+  }
+
+  * {
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  table{
+    color: white;
+  }
+
+  .logs{
+    color: white;
+  }

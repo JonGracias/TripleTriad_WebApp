@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 20.414 20.414" xmlns="http://www.w3.org/2000/svg">
+  <g id="meteor" transform="translate(-2 -1.586)">
+    <circle id="secondary" fill="#2ca9bc" cx="4" cy="4" r="4" transform="translate(3 13)"/>
+    <path id="primary" d="M9.24,9.11l1.41-1.42m8.94-3.28L21,3M14.89,14.76l1.42-1.41M13.67,4.67l1.42-1.41m4.24,7.07,1.41-1.42M16.5,7.5,13,11M7,13a4,4,0,1,0,4,4A4,4,0,0,0,7,13Z" fill="none" stroke="#8B1E3F" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+</svg>

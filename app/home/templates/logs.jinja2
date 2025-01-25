@@ -1,0 +1,15 @@
+{% extends "home_layout.jinja2" %}
+
+{% block content %}
+    <div class="hero">
+        <div class="logs">
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message.content }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+    </div>
+
+{% endblock %}

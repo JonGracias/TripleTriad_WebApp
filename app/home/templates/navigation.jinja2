@@ -1,0 +1,14 @@
+
+<div class="navbar">
+    {{cheese | safe}}
+        {% if current_user.is_authenticated %}
+            <a href="/logout">Logout</a>
+            <a href="/update">Update Password</a>
+            <a href="/home">Profile</a>
+        {% else %}
+            <a href="/login">Login</a>
+        {% endif %}
+        <a href="/">Home</a>
+        <a href="/logs">Show Logs</a>
+
+</div>

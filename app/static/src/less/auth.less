@@ -1,0 +1,133 @@
+@import 'auth_vars.less';
+
+.signup-page,
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: @background-color;
+  .form-wrapper {
+    width: 370px;
+    max-width: 470px;
+    padding: 50px;
+
+    @media (max-width: 600px) {
+      width: 100%;
+      margin: 15px auto;
+      padding: 30px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: @header-color;
+      font-weight: 300;
+      border-radius: 0;
+      border-bottom: 1px solid #dee2ef;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      font-family: @body-font;
+
+      @media (max-width: 600px) {
+        font-size: 1.3rem;
+      }
+    }
+
+
+    input {
+      padding: 10px 13px;
+      margin-bottom: 15px;
+      width: -webkit-fill-available;
+      width: -moz-available;
+      border-radius: 2px;
+      border: 1px solid #d4d9e3;
+      font-weight: 200;
+      color: #4d5060;
+      font-family: @body-font;
+      transition: @transition;
+      font-size: .9em;
+      outline-color: transparent;
+      outline-style: none;
+      @media (max-width: 600px) {
+        font-size: .9em;
+      }
+
+      &::placeholder {
+        color: #828895;
+      }
+
+      &:hover {
+        border-color: @theme-color;
+        background: #d9f6ff;
+
+        &::placeholder {
+          color: @theme-color;
+        }
+      }
+
+      &:focus {
+        background: white;
+        border-color: @theme-color;
+        box-shadow: unset;
+
+        &::placeholder {
+          color: #d4d9e3;
+        }
+      }
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    label {
+      font-size: .9em;
+      color: @header-color;
+      margin-bottom: 5px;
+      display: block;
+      font-weight: 300;
+      font-family: @body-font;
+    }
+
+    input[type="submit"] {
+      background: @theme-color;
+      color: white;
+      border-radius: 2px;
+      font-weight: 400;
+      border: 1px solid @theme-color;
+      transition: @transition;
+
+      &:hover {
+        cursor: pointer;
+        background: white;
+        color: @theme-color;
+      }
+    }
+
+    .errors, .alert {
+      margin-bottom: 1rem;
+      list-style: none;
+      padding: 0;
+      font-size: .9em;
+      color: #b75353;
+    }
+
+  }
+
+  .login-signup {
+    text-align: center;
+    font-weight: 300;
+    font-size: 0.8em;
+    font-family: @body-font;
+    color: @theme-color;
+
+    a {
+      color: @header-color;
+      font-weight: 500;
+    }
+  }
+}
+
+

@@ -1,0 +1,61 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+  <div class="form-wrapper">
+
+    {% for message in get_flashed_messages() %}
+      <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+      </div>
+    {% endfor %}
+
+    <h1>Update Password</h1>
+
+    <form method="POST" action="/update">
+      {{ form.csrf_token }}
+
+      <fieldset class="old_password" id="old_user_password" minlength="8" name="old_user_password" >
+        {{ form.old_user_password.label }}
+        {{ form.old_user_password }}
+        {% if form.old_user_password.errors %}
+          <ul class="errors">
+            {% for error in form.old_user_password.errors %}
+              <li>{{ error }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+      </fieldset>
+
+      <fieldset class="password" id="user_password" minlength="8" name="user_password" >
+        {{ form.user_password.label }}
+        {{ form.user_password }}
+        {% if form.user_password.errors %}
+          <ul class="errors">
+            {% for error in form.user_password.errors %}
+              <li>{{ error }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+      </fieldset>
+
+      <fieldset class="confirm" id="user_password_confirm" name="user_password_confirm" >
+        {{ form.user_password_confirm.label }}
+        {{ form.user_password_confirm }}
+        {% if form.user_password_confirm.errors %}
+          <ul class="errors">
+            {% for error in form.user_password_confirm.errors %}
+              <li>{{ error }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+      </fieldset>
+
+      <div class="submit-button">
+        {{ form.submit_button }}
+      </div>
+
+    </form>
+
+    <div class="login-signup">
+      <span><a href="{{ url_for('auth.login') }}">Exit</a></span>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.env
+
+# Virtual Environment
+venv/
+env/
+
+# IDE/Editor Config
+.vscode/
+.idea/
+*.swp
+
+# macOS
+.DS_Store
+
+# Logs and Debugging
+*.log
+*.out
+*.err
+logs/
+debug.log
+
+# Flask Cache and Session Data
+instance/
+*.sqlite3
+*.db
+
+# WebAssets Cache
+static/.webassets-cache/
+
+# Node.js
+node_modules/
+npm-debug.log*
+
+# Distribution/Packaging
+*.egg-info/
+dist/
+build/
+
+# Temporary Files
+*.bak
+*.tmp
+~$*
+
+# Other
+coverage/
+*.coverage

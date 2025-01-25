@@ -1,0 +1,57 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+  <div class="form-wrapper">
+
+    <h1>Log In</h1>
+
+    <form method="POST" action="/login">
+      {{ form.csrf_token }}
+
+      <fieldset required type="email" class="email" id="user_email">
+        {{ form.user_email.label }}
+        {{ form.user_email(placeholder='youremail@example.com') }}
+        {% if form.user_email.errors %}
+          <ul class="errors">
+            {% for error in form.user_email.errors %}
+              <li>{{ error }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+      </fieldset>
+
+      <fieldset required type="password" class="password" id="user_password">
+        {{ form.user_password.label }}
+        {{ form.user_password }}
+        {% if form.user_password.errors %}
+          <ul class="errors">
+            {% for error in form.user_password.errors %}
+              <li>{{ error }}</li>{% endfor %}
+          </ul>
+        {% endif %}
+      </fieldset>
+
+      {% if get_flashed_messages() %}
+        <div class="alert alert-warning">
+          {{ get_flashed_messages()[-1] }}
+        </div>
+      {% endif %}
+
+      <div class="submit-button">
+        {{ form.submit_button }}
+      </div>
+
+
+      <div class="login-signup">
+        <span>Don't have an account?</span>
+        <a href="{{ url_for('auth.signup') }}">Sign up.</a>
+      </div>
+      <div class="login-signup">
+        <span><a href="{{ url_for('auth.logout') }}">Exit</a></span>
+      </div>
+
+    </form>
+
+    
+  </div>
+
+{% endblock %}

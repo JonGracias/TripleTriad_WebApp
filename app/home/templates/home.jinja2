@@ -1,0 +1,18 @@
+{% extends "home_layout.jinja2" %}
+
+{% block content %}
+    <div class="hero">
+        <div class="welcome">
+            <h2> Welcome {{ user_name }} </h2>
+        </div>
+        <div class="image_table">
+            {{ html_table | safe}}
+        </div>
+        <div>
+            {{ meteor | safe}}
+            {{cheeseburger | safe}}
+        </div>
+
+    </div>
+
+{% endblock %}
